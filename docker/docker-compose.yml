@@ -1,0 +1,41 @@
+version: '3.8'
+volumes:
+  mysql-db:
+    driver: local
+services:
+  db:
+    build: ./mysql
+    image: demo-db:0.0.1
+    # コンテナ名を明示的に指定する
+    container_name: db-container
+    # ホスト名を明示的に指定する
+    hostname: db-server
+    restart: always
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/initdb.d:/docker-entrypoint-initdb.d
+      - ../log/mysql:/var/log/mysql
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: demo_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpassword
+  app:
+    build: ./java
+    image: demo-app:0.0.1
+    # コンテナ名を明示的に指定する
+    container_name: app-container
+    # ホスト名を明示的に指定する
+    hostname: app-server
+    volumes:
+      - ../:/app
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    depends_on:
+      - db
+    command: ./gradlew clean bootRun

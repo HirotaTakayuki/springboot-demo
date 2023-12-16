@@ -1,0 +1,45 @@
+#spring:
+#  config:
+#    activate:
+#      on-profile: develop
+---
+spring:
+  config:
+    activate:
+      on-profile: develop
+  thymeleaf:
+    cache: false
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db:3306/demo_db
+    username: user
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        dialect=org:
+          hibernate:
+            dialect:
+              MySQL5InnoDBDialect:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  data:
+    web:
+      base-path: /
+---
+#spring:
+#  profiles: production
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://xxxx:3306/demo_db
+#    username: xxxx
+#    password: xxxx
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#  data:
+#    web:
+#      base-path: /
