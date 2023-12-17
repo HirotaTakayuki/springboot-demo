@@ -26,10 +26,10 @@
     </tr>
     <tr>
       <td th:text="*{id}">id</td>
-      <td th:text="*{bookName}">書籍名</td>
-      <td th:text="*{volumeNum}">巻</td>
-      <td th:text="*{authorName}">著者名</td>
-      <td th:text="*{publishedDate}">刊行日</td>
+      <td th:text="*{book_name}">書籍名</td>
+      <td th:text="*{volume_num}">巻</td>
+      <td th:text="*{author_name}">著者名</td>
+      <td th:text="*{published_date}">刊行日</td>
     </tr>
   </table>
 </div>
@@ -45,10 +45,10 @@
     </tr>
     <tr th:each="book:${bookList}" th:object="${book}">
       <td th:text="*{id}">id</td>
-      <td th:text="*{bookName}">書籍名</td>
-      <td th:text="*{volumeNum}">巻</td>
-      <td th:text="*{authorName}">著者名</td>
-      <td th:text="*{publishedDate}">刊行日</td>
+      <td th:text="*{book_name}">書籍名</td>
+      <td th:text="*{volume_num}">巻</td>
+      <td th:text="*{author_name}">著者名</td>
+      <td th:text="*{published_date}">刊行日</td>
     </tr>
   </table>
 </div>
