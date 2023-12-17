@@ -18,7 +18,6 @@ spring:
     initialization-mode: always
   ### スネークケースのDBカラム名をSpringのEntity側ではキャメルケースとして対応付けてくれる。
   mybatis:
-#    config-location: classpath:/mybatis/mybatis-config.xml
     configuration:
       map-underscore-to-camel-case: true
 
