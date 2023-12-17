@@ -33,6 +33,10 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+	// Bootstrap
+	implementation('org.webjars:jquery:3.5.1')
+	implementation('org.webjars:bootstrap:4.5.3')
+	implementation('org.webjars:webjars-locator:0.40')
 }
 
 tasks.named('test') {

@@ -14,6 +14,16 @@ spring:
     url: jdbc:mysql://db:3306/demo_db
     username: user
     password: password
+    ### 初期化を行うかの指定。
+    initialization-mode: always
+  ### スネークケースのDBカラム名をSpringのEntity側ではキャメルケースとして対応付けてくれる。
+  mybatis:
+    config-location: classpath:/mybatis/mybatis-config.xml
+#    configuration:
+#      map-underscore-to-camel-case: true
+
+    mapper-locations:
+      classpath*:com/example/demo/dao/*.xml:
   jpa:
     properties:
       hibernate:
@@ -27,6 +37,14 @@ spring:
   data:
     web:
       base-path: /
+logging:
+  level:
+    org:
+      springframework: WARN
+    com:
+      example:
+        demo:
+          repository: DEBUG
 ---
 #spring:
 #  profiles: production
