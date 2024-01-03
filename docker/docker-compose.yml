@@ -44,7 +44,7 @@ services:
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
       - ./mysql/initdb.d:/docker-entrypoint-initdb.d
-      - ../log/mysql:/var/log/mysql
+      - ../log/mysql:/var/log/mysql # logの永続化
     expose:
       - 3306
     ports:
