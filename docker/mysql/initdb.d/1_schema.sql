@@ -1,8 +1,9 @@
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
-    first_name varchar(20),
-    last_name varchar(20),
-    PRIMARY KEY (id)
+    userid varchar(24),
+    name varchar(50),
+    email varchar(255),
+    PRIMARY KEY (id, userid)
 );
 
 CREATE TABLE booktable(

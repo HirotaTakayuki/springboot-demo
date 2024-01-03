@@ -20,7 +20,16 @@ spring:
   mybatis:
     configuration:
       map-underscore-to-camel-case: true
-
+# SQLSQLログ出力
+logging:
+  level:
+    org:
+      springframework: WARN
+    com:
+      example:
+        demo:
+          repository: DEBUG
+          UserDataMapper: DEBUG
 #    mapper-locations:
 #      classpath*:com/example/demo/dao/*.xml:
   jpa:
@@ -36,14 +45,7 @@ spring:
   data:
     web:
       base-path: /
-logging:
-  level:
-    org:
-      springframework: WARN
-    com:
-      example:
-        demo:
-          repository: DEBUG
+
 ---
 #spring:
 #  profiles: production
