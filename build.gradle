@@ -29,6 +29,8 @@ dependencies {
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 //	https://dev.thanaism.com/2021/11/coding-java/
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+//	https://tech.excite.co.jp/entry/2023/12/06/100456
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
