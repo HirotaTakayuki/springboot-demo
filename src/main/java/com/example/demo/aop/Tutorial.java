@@ -11,7 +11,7 @@ public class Tutorial {
   @After("execution(String *..*AopController.logtest*(..))")
   public void logoutput() {
     System.out.println("test1");
-    System.out.println("���{��");
+//    TODO 日本語だと文字化けする
     System.out.println("test2");
   }
 }

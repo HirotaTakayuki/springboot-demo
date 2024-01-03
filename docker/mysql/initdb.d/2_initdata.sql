@@ -1,5 +1,5 @@
-INSERT INTO users(first_name, last_name) VALUES('Ichiro', 'Suzuki');
-INSERT INTO users(first_name, last_name) VALUES('Taro', 'Tanaka');
+INSERT INTO users(userid, name, email) VALUES('userid1', 'Ichiro', 'test@gmail.com');
+INSERT INTO users(userid, name, email) VALUES('userid2', 'Taro', 'test@gmail.com');
 
 INSERT INTO booktable (book_name, volume_num,author_name,published_date) VALUES
 ( 'HUNTER X HUNTER',36,'冨樫義博','2018-10-04'),
