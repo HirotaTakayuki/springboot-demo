@@ -9,7 +9,7 @@ import com.example.demo.form.BookForm;
 import com.example.demo.service.BookService;
 
 @Controller
-@RequestMapping("book")
+@RequestMapping("/book")
 public class BookController {
 
   @Autowired

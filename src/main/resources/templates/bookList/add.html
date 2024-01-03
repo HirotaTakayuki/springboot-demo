@@ -8,7 +8,7 @@
 	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
 </head>
 <body>
-	<div th:replace="bookList/share::header"></div>
+	<div th:replace="~{bookList/share::header}"></div>
 	<div class="container">
 		<h1>本を新規で登録する</h1>
 		<form th:action="@{/book-create}" th:object="${bookInfoForm}" method="POST">
